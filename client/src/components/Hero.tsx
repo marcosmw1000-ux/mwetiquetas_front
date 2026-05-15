@@ -13,9 +13,7 @@ export function Hero() {
           {/* Content */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <Badge variant="outline" className="w-fit">
-                ⚡ Empresa Especializada na Fabricação de Etiquetas
-              </Badge>
+              
 
               <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">
                 Etiquetas Personalizadas
