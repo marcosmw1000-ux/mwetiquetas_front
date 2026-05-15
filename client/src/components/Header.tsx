@@ -42,14 +42,14 @@ export function Header() {
         </div>
       </div>
 
-      {/* Main Header */}
+      {/* Navbar */}
       <header className="bg-background/80 backdrop-blur-md border-b border-border sticky top-0 z-50">
         <div className="container">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
               <img
-                src="/logo_marca.png"
+                src="/logo_marca.jpeg"
                 alt="MW Etiquetas"
                 className="h-8 w-auto"
               />
