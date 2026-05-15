@@ -67,17 +67,7 @@ export function Hero() {
           {/* Carousel */}
           <div className="relative">
             <ProductCarousel />
-       <div className="absolute -bottom-4 -left-4 bg-card border border-border p-4 rounded-lg shadow-lg">
-              <div className="flex items-center space-x-2">
-                <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-accent text-accent" />
-                  ))}
-                </div>
-                <span className="text-sm font-medium">4.9/5</span>
-              </div>
-              <div className="text-xs text-muted-foreground">+Vendidos</div>
-            </div>
+       
           </div>
         </div>
            
