@@ -1,0 +1,35 @@
+{
+  "build_command": "pnpm run build",
+  "capabilities": [],
+  "dev_command": "pnpm run dev",
+  "env_vars": {},
+  "experiments": null,
+  "git_remote": {
+    "repo_url": "s3://vida-prod-gitrepo/webdev-git/310519663557996183/4kBSiCobSzRt8Nq6WA8CtM",
+    "access_key_id": "ASIAZV3A2ECZLUEKZKFX",
+    "secret_access_key": "V9arGLRCBwIxajS5l8QrJM1y++29d+tgtcItGT+J",
+    "session_token": "IQoJb3JpZ2luX2VjEKz//////////wEaCXVzLWVhc3QtMSJHMEUCIH4rVa/BIP1kGghlM8zgpkua0HgNSYDQYc/nPbtfWLXBAiEAplGZGfU6VPiGrRaKCfrS7o/c6PEfqjhdc6kwYZLE5WQq9gMIdRAEGgw2NjUzODYwOTg4NjYiDKiWl+yLcvp5JWN+iCrTA3aeKwJiDNsbQnOpqYlY8CN2eNPxvctIg1i9MKbOHFR8fLJx6vQPJKlOjZqbM8gzcSPePdsOGT/MDO7q47YSj1GUSHNnlLgi6IxoC+MqImJEdyXIXE597jfM5EvvyYljz2v6NyWWyu5LP6se1Z+6mbOImC7F0qhK8dOPWobi1Rxf3l9ropri7yFMWU8OYrnkb2pZWpKtKfQKQkXJwIrrmmqMXagVraI+O7G/CasCc8io0XqXDPMy29PAl/AVA2LFbg+3a87IeVup60XogNCdQDxVKQslCh/gWbNpeTEPhpUifgDjm3s60m99oYooNhBESJTlJiel3nJubIn5cxv6mfjpSFLGuOgutvkuxJzEq/B/vRhF4HtsJc8p20yzTwcMIkz0ZYl/UiHcLXCHg2vgOzwAjJbx22hF/60CJcE44nqniu4dbKNyV15Ej1GuEqrX9iczWlEt0umWdax15xMocJLk3os0wacvAwT9Tx2uGXsBjMXMbywdfWuqFz8ArZa1l8DYrXQldXnpr9tEJDuaUh4jmWHrja0QxBz1EXsO4Sk240OOs0Fn5Z8k36ybS5w35BSAUeI+g0mWyh1AS0cTObFK/JT+F9rsT/MhNnvT4o6ATE7jMI2TnNAGOp0BeQ97lgaTU8If+E8bu2E+4drBwxqi62RFKSHduOzMvwwoFFyUqAsIf1hhWkKPyE5txNGJmpPK82eiAqaQ2yk7htZFHQNLDFuCsT/LJCDjpYY0syG64LNx11blk/T0ZGw38Wh27aCDGO+UGmSns4qzYWq1rumBWgUWu43givf4NxJbf9/nOvWoi+1LlutC76aHtHD7Va5fMPevwgUWaw==",
+    "expiration": "2026-05-15T23:54:53.000Z"
+  },
+  "name": "smart-label-forge-recreated",
+  "path": "/home/ubuntu/smart-label-forge-recreated",
+  "port": 3000,
+  "secrets": {
+    "BUILT_IN_FORGE_API_KEY": "7Df3TqEPRyzsENT72DP6ZC",
+    "BUILT_IN_FORGE_API_URL": "https://forge.manus.ai",
+    "JWT_SECRET": "hPqzWUJheJBpQPZVvK9D4Z",
+    "OAUTH_SERVER_URL": "https://api.manus.im",
+    "OWNER_NAME": "Nadson Coelho",
+    "OWNER_OPEN_ID": "Bzyc4ztKtuNrCTqHGq56gy",
+    "VITE_ANALYTICS_ENDPOINT": "https://manus-analytics.com",
+    "VITE_ANALYTICS_WEBSITE_ID": "c57f2137-9dc6-4aad-955f-f4758d62b1a2",
+    "VITE_APP_ID": "4kBSiCobSzRt8Nq6WA8CtM",
+    "VITE_APP_LOGO": "",
+    "VITE_APP_TITLE": "Smart Label Forge Recreated",
+    "VITE_FRONTEND_FORGE_API_KEY": "G8RWKeAgTSURUwafx6PpMK",
+    "VITE_FRONTEND_FORGE_API_URL": "https://forge.manus.ai",
+    "VITE_OAUTH_PORTAL_URL": "https://manus.im"
+  },
+  "template_id": "web-static",
+  "test_command": "pnpm test"
+}
