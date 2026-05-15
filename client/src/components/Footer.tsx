@@ -17,7 +17,7 @@ export function Footer() {
     <footer className="bg-primary text-primary-foreground">
       <div className="container py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
+          {/* Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <img
@@ -90,7 +90,7 @@ export function Footer() {
             </nav>
           </div>
 
-          {/* Products */}
+          {/* Produtos */}
           <div className="space-y-4">
             <h4 className="font-semibold text-lg">Produtos</h4>
             <nav className="flex flex-col space-y-2">
