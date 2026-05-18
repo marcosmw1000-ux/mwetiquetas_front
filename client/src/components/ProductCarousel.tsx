@@ -164,7 +164,7 @@ export function ProductCarousel() {
 
             <Link href={currentItem.link}>
               <Button className="mt-6 h-12 w-full rounded-xl bg-white text-black font-semibold hover:bg-white/90 shadow-2xl">
-                Ver Catálogo
+                Compre agora
               </Button>
             </Link>
           </div>
