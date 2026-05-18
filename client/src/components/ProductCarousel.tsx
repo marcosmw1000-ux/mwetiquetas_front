@@ -27,6 +27,7 @@ const carouselItems: CarouselItem[] = [
     metrics: ['61x30', '40x40', '40x30'],
     icon: '',
     link: '/catalogo',
+    image: '/etiqueta_balanca.png',
   },
   {
     id: 'preco',
@@ -42,6 +43,7 @@ const carouselItems: CarouselItem[] = [
     metrics: ['Resistente ao Frio'],
     icon: '',
     link: '/catalogo',
+    image: '/etiqueta_congelamento.png',
   },
 ];
 
@@ -76,10 +78,10 @@ export function ProductCarousel() {
   return (
     <div className="relative w-full">
       {/* Carousel Container */}
-      <div 
-        className="relative rounded-lg overflow-hidden"
+      <div
+        className="relative overflow-hidden rounded-3xl"
         style={
-          currentItem.image && window.innerWidth < 640
+          currentItem.image && window.innerWidth >= 640
             ? {
                 backgroundImage: `linear-gradient(135deg, rgba(30, 64, 175, 0.85), rgba(234, 88, 12, 0.85)), url(${currentItem.image})`,
                 backgroundSize: 'cover',
@@ -93,7 +95,6 @@ export function ProductCarousel() {
         {/* Desktop Layout */}
         <div className="hidden sm:block py-12 px-8">
           <div className="flex items-center justify-between gap-6 lg:gap-8">
-            {/* Image Section */}
             {currentItem.image && (
               <div className="flex-shrink-0 hidden sm:flex items-center justify-center w-40 lg:w-48">
                 <img
@@ -104,17 +105,15 @@ export function ProductCarousel() {
               </div>
             )}
 
-            {/* Content Section */}
             <div className="flex-1 space-y-3 animate-in fade-in duration-500">
               <h3 className="text-2xl lg:text-3xl font-bold text-foreground">
                 {currentItem.name}
               </h3>
-              
+
               <div className="text-sm lg:text-base text-primary font-semibold leading-relaxed">
                 {currentItem.metrics.join(' • ')}
               </div>
 
-              {/* CTA Button */}
               <Link href={currentItem.link}>
                 <Button className="mt-4 bg-accent hover:bg-accent/90 text-accent-foreground">
                   Compre Agora
@@ -125,28 +124,76 @@ export function ProductCarousel() {
         </div>
 
         {/* Mobile Layout */}
-        <div className="sm:hidden py-16 px-6 flex flex-col items-center justify-center text-center min-h-80">
-          <div className="space-y-4 animate-in fade-in duration-500">
-            <h3 className="text-2xl font-bold text-white drop-shadow-lg">
-              {currentItem.name}
-            </h3>
-            
-            <div className="text-sm font-semibold text-white drop-shadow-lg leading-relaxed">
-              {currentItem.metrics.join(' • ')}
+        <div className="sm:hidden relative min-h-[520px] overflow-hidden">
+          {/* Background */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/10" />
+
+          {/* Image */}
+          {currentItem.image && (
+            <div className="absolute top-2 left-0 right-0 flex justify-center z-10 px-4 pointer-events-none">
+              <img
+                src={currentItem.image}
+                alt={currentItem.name}
+                className="w-full max-w-[280px] h-auto object-contain rounded-3xl"
+              />
+            </div>
+          )}
+
+          {/* Content */}
+          <div className="relative z-20 flex flex-col justify-end min-h-[520px] p-6">
+            <div className="mb-4">
+              <span className="inline-flex items-center rounded-full bg-white/15 backdrop-blur-md border border-white/20 px-4 py-1 text-xs font-semibold tracking-wide text-white">
+                Etiquetas Profissionais
+              </span>
             </div>
 
-            {/* CTA Button */}
+            <h3 className="text-3xl font-bold leading-tight text-white drop-shadow-xl max-w-[260px]">
+              {currentItem.name}
+            </h3>
+
+            <div className="mt-4 flex flex-wrap gap-2">
+              {currentItem.metrics.map((metric, index) => (
+                <span
+                  key={index}
+                  className="rounded-full bg-white/10 backdrop-blur-md border border-white/10 px-3 py-1 text-xs font-medium text-white"
+                >
+                  {metric}
+                </span>
+              ))}
+            </div>
+
             <Link href={currentItem.link}>
-              <Button className="mt-6 bg-accent hover:bg-accent/90 text-accent-foreground">
-                Compre Agora
+              <Button className="mt-6 h-12 w-full rounded-xl bg-white text-black font-semibold hover:bg-white/90 shadow-2xl">
+                Ver Catálogo
               </Button>
             </Link>
+          </div>
+
+          {/* Mobile Navigation */}
+          <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 flex items-center justify-between px-3 z-30">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="bg-white/80 hover:bg-white text-black rounded-full"
+              onClick={goToPrevious}
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </Button>
+
+            <Button
+              variant="ghost"
+              size="icon"
+              className="bg-white/80 hover:bg-white text-black rounded-full"
+              onClick={goToNext}
+            >
+              <ChevronRight className="h-5 w-5" />
+            </Button>
           </div>
         </div>
       </div>
 
-      {/* Navigation Buttons */}
-      <div className="absolute inset-y-0 left-0 right-0 flex items-center justify-between px-4 pointer-events-none">
+      {/* Desktop Navigation */}
+      <div className="hidden sm:flex absolute inset-y-0 left-0 right-0 items-center justify-between px-4 pointer-events-none">
         <Button
           variant="ghost"
           size="icon"
@@ -155,6 +202,7 @@ export function ProductCarousel() {
         >
           <ChevronLeft className="h-6 w-6" />
         </Button>
+
         <Button
           variant="ghost"
           size="icon"
@@ -166,7 +214,7 @@ export function ProductCarousel() {
       </div>
 
       {/* Indicators */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-30">
         {carouselItems.map((_, index) => (
           <button
             key={index}
@@ -176,8 +224,8 @@ export function ProductCarousel() {
             }}
             className={`h-2 rounded-full transition-all ${
               index === currentIndex
-                ? 'bg-primary w-8'
-                : 'bg-primary/30 w-2 hover:bg-primary/50'
+                ? 'bg-white w-8'
+                : 'bg-white/40 w-2 hover:bg-white/60'
             }`}
           />
         ))}
