@@ -213,23 +213,8 @@ export function ProductCarousel() {
         </Button>
       </div>
 
-      {/* Indicators */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-30">
-        {carouselItems.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => {
-              setCurrentIndex(index);
-              setAutoplay(false);
-            }}
-            className={`h-2 rounded-full transition-all ${
-              index === currentIndex
-                ? 'bg-white w-8'
-                : 'bg-white/40 w-2 hover:bg-white/60'
-            }`}
-          />
-        ))}
-      </div>
+      
+      
     </div>
   );
 }
